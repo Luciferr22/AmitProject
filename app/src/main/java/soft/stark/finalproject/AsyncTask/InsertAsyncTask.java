@@ -17,6 +17,9 @@ public class InsertAsyncTask extends AsyncTask<ProductModel,Void ,Void> {
 
     @Override
     protected Void doInBackground(ProductModel... productModels) {
+
+
+
         productDAO.insertProduct(productModels[0]);
         return null;
     }

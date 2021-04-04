@@ -2,6 +2,7 @@ package soft.stark.finalproject.Room;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -13,7 +14,7 @@ import soft.stark.finalproject.ProductModel;
 public interface ProductDAO {
 
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertProduct(ProductModel productModel);
 
     @Query("SELECT * FROM products")

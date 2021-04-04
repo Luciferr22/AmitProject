@@ -109,9 +109,7 @@ import soft.stark.finalproject.webServices.WebServices;
                 ProductModel selectedModel = productList.get(position);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("current_product", selectedModel);
-
                 Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_productDetailsFragment, bundle);
-
             }
         }, new ProductAdapter.onAddProductsClickListener() {
             @Override
@@ -122,15 +120,8 @@ import soft.stark.finalproject.webServices.WebServices;
                 Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_cartFragment);
             }
         });
-
         productRv.setAdapter(productAdapter);
-         productAdapter.notifyDataSetChanged();
-
-
-
-
-
-
+        productAdapter.notifyDataSetChanged();
     }
 
 
